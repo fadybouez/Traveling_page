@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//start variable in navbar
+$main-color-textNav: #212832;
+$margin-item-content: 0 10px;
+$font-size-item: 17px;
+$font-weight-item: 500;
+$color-hover-item: #f1a501;
+//end variable in navbar
+
+// Start mixin after square in box section one
+@mixin after-Square($left, $top, $color, $border) {
+    content: "";
+    z-index: -12;
+    border: $border solid $color;
+    position: relative;
+    left: $left;
+    top: $top;
+    border-radius: 12px 3px;
+    text-align: center;
+}
+// End mixin after square in box
+.containerHeader {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+//Start navbar
+.parentNav {
+    font-family: sans-serif;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .links {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                a {
+                    color: #212832;
+                    display: block;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: 0.3s;
+                    padding: 30px 10px;
+
+                    &:hover {
+                        color: $color-hover-item;
+                    }
+                }
+                .active {
+                    color: $color-hover-item;
+                }
+            }
+        }
+        .content {
+            margin-left: 30px;
+            .language {
+                border: none;
+                margin: $margin-item-content;
+                font-size: 17px;
+                font-weight: 500;
+                color: $main-color-textNav;
+                background-color: #fff1da;
+            }
+        }
+    }
+}
+//End navbar
+
+//Start Header
+.parentLandingPage {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 14%, #FFF1DA 86%);    
+    // background-image: url(images/Decore.png);
+    background-size: cover;
+    min-height: 100vh;
+    .containerLanding {
+        top: 60px;
+        display: flex;
+        width: 90%;
+        margin: auto;
+        position: relative;
+        .content {
+            margin-top: 30px;
+            padding-left: 50px;
+            line-height: 2;
+            p:first-child {
+                color: #df6951;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            p {
+                font-family: "Poppins", sans-serif;
+                margin: 30px 0;
+            }
+            :nth-child(3) {
+                color: #5e6282;
+            }
+            h2 {
+                font-family: "Rubik", sans-serif;
+                color: #181e4b;
+                font-size: 30px;
+            }
+            .imgRectangle {
+                width: 250px;
+                position: absolute;
+                left: 150px;
+                top: 160px;
+                z-index: -1;
+            }
+        }
+        .imageHeader {
+            position: relative;
+            .planeImg {
+                position: absolute;
+                width: 150px;
+                top: 50px;
+                left: 50px;
+            }
+            :nth-child(2) {
+                position: absolute;
+                width: 450px;
+                top: 40px;
+                left: 40px;
+            }
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            button:first-child {
+                color: white;
+                background-color: #f1a501;
+                width: 120px;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .icon {
+                color: #df6951;
+                font-size: 35px;
+                margin-left: 30px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                span {
+                    padding-left: 5px;
+                    font-size: 12px;
+                    color: #212832;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+//End Header
+
+// Start Section Category
+$sizing-box: 80%;
+@mixin content-title-Sections-textCenter {
+    text-align: center;
+    margin: 50px 0;
+    p {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        color: #5e6282;
+    }
+    h2 {
+        font-family: "Rubik", sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        color: #14183e;
+    }
+}
+.parentSectionCategory {
+    width: 90%;
+    margin: 100px auto;
+    .content-titleSection {
+        @include content-title-Sections-textCenter;
+    }
+    .cardItems {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 30px 10px;
+
+        .box {
+            margin: 50px 0;
+            padding: 30px 10px;
+            line-height: 2;
+            width: 267px;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .cardOne {
+            span::after {
+                // $left, $top, $color, $border
+                @include after-Square(90px, -20px, #fff1da, 20px);
+            }
+        }
+        .cardTwo {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: #fff;
+            span::after {
+                // $left, $top, $color, $border
+                @include after-Square(-105px, 10px, #df6951, 35px);
+            }
+        }
+        .cardThree {
+            span::after {
+                // $left, $top, $color, $border
+                @include after-Square(110px, -70px, #fff1da, 20px);
+            }
+        }
+        .cardFour {
+            span::after {
+                // $left, $top, $color, $border
+                @include after-Square(75px, -5px, #fff1da, 20px);
+            }
+        }
+    }
+}
+// End Section Category
+
+// Start Section Destinations
+.parentSectionDestinations {
+    width: 90%;
+    margin: 100px auto;
+    .content-titleSection {
+        @include content-title-Sections-textCenter;
+    }
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        .card1 {
+            position: relative;
+            img {
+                width: 314px;
+                height: 457px;
+                object-fit: fill;
+                border-radius: 24px;
+                background-size: contain;
+                clip-path: rect(10px, 20px, 30px, 40px);
+            }
+            .content {
+                position: absolute;
+                bottom: 0px;
+                height: 130px;
+                width: 315px;
+                border-radius: 0 0 24px 24px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                padding: 10px 40px 0 50px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                background-color: #fff;
+                :nth-child(2) {
+                    text-align: center;
+                }
+                p {
+                    width: calc(100% / 2);
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+//End Section Destinations
+
+@mixin content-title-Sections-textStartLeft {
+    margin: 30px 0;
+    // padding-left: 40px;
+    p {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        color: #5e6282;
+    }
+    h2 {
+        font-family: "Rubik", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        color: #14183e;
+    }
+}
+
+//Start Section Book
+.parentSectionBook {
+    width: 80%;
+    margin: 100px auto;
+    .title {
+        @include content-title-Sections-textStartLeft;
+    }
+    .parent {
+        display: flex;
+        justify-content: space-between;
+        .leftCont {
+            line-height: 1.5;
+            // width: 450px;
+            .content {
+                h2 {
+                    margin-bottom: 20px;
+                }
+                .iconImg {
+                    padding: 25px 0 25px 0;
+                    display: flex;
+                }
+                p {
+                    padding-left: 30px;
+
+                    span {
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .rightCont {
+            display: flex;
+            flex-direction: column;
+            box-shadow: #59b1e6 10px 5px 15px, #00000059 0px 5px 15px;
+            border-radius: 20px;
+            img {
+                padding: 20px;
+            }
+            .text {
+                padding: 20px;
+                line-height: 1.5;
+                .icon {
+                    i {
+                        background-color: #f5f5f5;
+                        border-radius: 50%;
+                        padding: 10px;
+                    }
+                }
+                .building {
+                    padding-top: 15px;
+                    :nth-child(3) {
+                        color: #4152ca;
+                    }
+                    p {
+                        display: inline-block;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//End Section Book
+
+//Start Section PeopleSay
+.parentSectionPeopleSay {
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    .title {
+        @include content-title-Sections-textStartLeft;
+    }
+    .card {
+        margin-top: 50px;
+        width: 504px;
+        height: 245px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 15px;
+        line-height: 2;
+        position: relative;
+        img {
+            position: absolute;
+            top: -40px;
+            left: -30px;
+        }
+        p {
+            padding-left: 40px;
+            padding-right: 30px;
+            padding-top: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}
+//End Section PeopleSay
+
+//Start Section LogoCompany
+.parentSectionLogoCompany {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+//End Section LogoCompany
+
+//  Start Section EmailSubscribe
+.parentSectionEmailSubscribe {
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    margin: 80px auto;
+    background-image: url(images/Curve\ Line\ \(1\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100px 10px 10px 10px;
+    text-align: center;
+    line-height: 2;
+    height: 300px;
+    position: relative;
+    i {
+        padding: 10px;
+        color: #ffffff;
+        font-size: 30px;
+        border-radius: 50%;
+        background-color: #747def;
+        right: -15px;
+        top: -15px;
+        position: absolute;
+    }
+
+    .text {
+        padding-top: 30px;
+        text-align: center;
+        position: relative;
+        p {
+            font-size: 22px;
+        }
+    }
+    .Subscribe {
+        margin-top: 30px;
+        font-weight: 200;
+        input {
+            height: 35px;
+            width: 310px;
+            border: none;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #ff946d;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            width: 120px;
+            height: 35px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+  
+}
+//  End Section EmailSubscribe
+@mixin footer-links {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    a {
+        text-decoration: none;
+        color: #212832;
+        margin-top: 5px;
+    }
+}
+// Start Footer
+footer {
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    margin: 100px auto;
+    .textBrand {
+        line-height: 1.6;
+    }
+    .links {
+        display: flex;
+        justify-content: space-between;
+        .divCompany {
+            @include footer-links;
+        }
+        .divContact {
+            @include footer-links;
+        }
+        .divMore {
+            @include footer-links;
+        }
+    }
+
+    .icon {
+        i {
+            margin: 8px;
+            padding-right: 8px;
+            border-radius: 50%;
+            color: #080809;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        P {
+            margin: 20px 0;
+        }
+    }
+    .email {
+        padding-top: 70px;
+        p {
+            text-align: center;
+        }
+    }
+}
+// End Footer
+////////////////////////////////////////////////////////////////////
+@media (min-width: 1024px) {
+    .parentLandingPage {
+        .containerLanding {
+            .imageHeader {
+                :nth-child(2) {
+                    width: 500px;
+                    left: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .parentNav {
+        .links {
+            .toggle-menu {
+                display: none;
+            }
+        }
+    }
+    .parentSectionDestinations {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .parentLandingPage {
+        .containerLanding {
+            .imageHeader {
+                .planeImg {
+                    top: 40px;
+                    left: 10px;
+                }
+                :nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .parentSectionCategory {
+        width: 100% !important;
+        .cardItems {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .box {
+                width: 60% !important;
+                margin: 30px 0;
+                line-height: 1.3 !important;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding-top: 30px;
+            }
+        }
+    }
+    .parentSectionDestinations {
+        .cards {
+            flex-direction: column;
+            align-items: center;
+            .card1 {
+                margin-top: 50px;
+            }
+        }
+    }
+    .parentSectionBook {
+        .parent {
+            flex-direction: column;
+        }
+    }
+    .parentSectionPeopleSay {
+        flex-direction: column;
+        .card {
+            width: 100%;
+            height: 300px;
+        }
+    }
+    .parentSectionLogoCompany {
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        .links{
+            flex-direction: column;
+            // align-items: center;
+        }
+    }
+
+}
+@media (max-width: 767px) {
+    .parentNav {
+        width: 95%;
+        padding-top: 20px;
+        .links {
+            ul {
+                display: none;
+            }
+            .toggle-menu:hover + ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff1da;
+                z-index: 999;
+                a {
+                    padding: 15px 10px;
+                }
+            }
+        }
+    }
+    .parentSectionEmailSubscribe {
+        line-height: 1.3;
+        .text{
+            p{
+                padding: 10px 10px 0 10px;
+            }
+        }
+        .Subscribe{
+            input{
+                width: 250px;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .imageHeader {
+        display: none;
+    }
+    .containerLanding {
+        width: 100%;
+        .content {
+            padding-left: 10px !important;
+            text-align: start;
+            p {
+                margin: 0;
+            }
+            h2 {
+                font-size: 10px;
+            }
+            .imgRectangle {
+                display: none;
+            }
+        }
+    }
+}

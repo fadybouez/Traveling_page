@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerHeader {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.parentNav {
+  font-family: sans-serif;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.parentNav .links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.parentNav .links ul {
+  display: flex;
+  list-style: none;
+}
+.parentNav .links ul li a {
+  color: #212832;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 30px 10px;
+}
+.parentNav .links ul li a:hover {
+  color: #f1a501;
+}
+.parentNav .links ul li .active {
+  color: #f1a501;
+}
+.parentNav .links .content {
+  margin-left: 30px;
+}
+.parentNav .links .content .language {
+  border: none;
+  margin: 0 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #212832;
+  background-color: #fff1da;
+}
+
+.parentLandingPage {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 14%, #FFF1DA 86%);
+  background-size: cover;
+  min-height: 100vh;
+}
+.parentLandingPage .containerLanding {
+  top: 60px;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.parentLandingPage .containerLanding .content {
+  margin-top: 30px;
+  padding-left: 50px;
+  line-height: 2;
+}
+.parentLandingPage .containerLanding .content p:first-child {
+  color: #df6951;
+  font-weight: bold;
+  font-size: 20px;
+}
+.parentLandingPage .containerLanding .content p {
+  font-family: "Poppins", sans-serif;
+  margin: 30px 0;
+}
+.parentLandingPage .containerLanding .content :nth-child(3) {
+  color: #5e6282;
+}
+.parentLandingPage .containerLanding .content h2 {
+  font-family: "Rubik", sans-serif;
+  color: #181e4b;
+  font-size: 30px;
+}
+.parentLandingPage .containerLanding .content .imgRectangle {
+  width: 250px;
+  position: absolute;
+  left: 150px;
+  top: 160px;
+  z-index: -1;
+}
+.parentLandingPage .containerLanding .imageHeader {
+  position: relative;
+}
+.parentLandingPage .containerLanding .imageHeader .planeImg {
+  position: absolute;
+  width: 150px;
+  top: 50px;
+  left: 50px;
+}
+.parentLandingPage .containerLanding .imageHeader :nth-child(2) {
+  position: absolute;
+  width: 450px;
+  top: 40px;
+  left: 40px;
+}
+.parentLandingPage .containerLanding .btn {
+  display: flex;
+  align-items: center;
+}
+.parentLandingPage .containerLanding .btn button:first-child {
+  color: white;
+  background-color: #f1a501;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.parentLandingPage .containerLanding .btn .icon {
+  color: #df6951;
+  font-size: 35px;
+  margin-left: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.parentLandingPage .containerLanding .btn .icon span {
+  padding-left: 5px;
+  font-size: 12px;
+  color: #212832;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.parentSectionCategory {
+  width: 90%;
+  margin: 100px auto;
+}
+.parentSectionCategory .content-titleSection {
+  text-align: center;
+  margin: 50px 0;
+}
+.parentSectionCategory .content-titleSection p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #5e6282;
+}
+.parentSectionCategory .content-titleSection h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #14183e;
+}
+.parentSectionCategory .cardItems {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 30px 10px;
+}
+.parentSectionCategory .cardItems .box {
+  margin: 50px 0;
+  padding: 30px 10px;
+  line-height: 2;
+  width: 267px;
+  height: 250px;
+  border-radius: 10px;
+}
+.parentSectionCategory .cardItems .cardOne span::after {
+  content: "";
+  z-index: -12;
+  border: 20px solid #fff1da;
+  position: relative;
+  left: 90px;
+  top: -20px;
+  border-radius: 12px 3px;
+  text-align: center;
+}
+.parentSectionCategory .cardItems .cardTwo {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+.parentSectionCategory .cardItems .cardTwo span::after {
+  content: "";
+  z-index: -12;
+  border: 35px solid #df6951;
+  position: relative;
+  left: -105px;
+  top: 10px;
+  border-radius: 12px 3px;
+  text-align: center;
+}
+.parentSectionCategory .cardItems .cardThree span::after {
+  content: "";
+  z-index: -12;
+  border: 20px solid #fff1da;
+  position: relative;
+  left: 110px;
+  top: -70px;
+  border-radius: 12px 3px;
+  text-align: center;
+}
+.parentSectionCategory .cardItems .cardFour span::after {
+  content: "";
+  z-index: -12;
+  border: 20px solid #fff1da;
+  position: relative;
+  left: 75px;
+  top: -5px;
+  border-radius: 12px 3px;
+  text-align: center;
+}
+
+.parentSectionDestinations {
+  width: 90%;
+  margin: 100px auto;
+}
+.parentSectionDestinations .content-titleSection {
+  text-align: center;
+  margin: 50px 0;
+}
+.parentSectionDestinations .content-titleSection p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #5e6282;
+}
+.parentSectionDestinations .content-titleSection h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #14183e;
+}
+.parentSectionDestinations .cards {
+  display: flex;
+  justify-content: space-around;
+}
+.parentSectionDestinations .cards .card1 {
+  position: relative;
+}
+.parentSectionDestinations .cards .card1 img {
+  width: 314px;
+  height: 457px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 24px;
+  background-size: contain;
+  -webkit-clip-path: rect(10px, 20px, 30px, 40px);
+          clip-path: rect(10px, 20px, 30px, 40px);
+}
+.parentSectionDestinations .cards .card1 .content {
+  position: absolute;
+  bottom: 0px;
+  height: 130px;
+  width: 315px;
+  border-radius: 0 0 24px 24px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 10px 40px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.parentSectionDestinations .cards .card1 .content :nth-child(2) {
+  text-align: center;
+}
+.parentSectionDestinations .cards .card1 .content p {
+  width: 50%;
+  padding: 5px;
+}
+
+.parentSectionBook {
+  width: 80%;
+  margin: 100px auto;
+}
+.parentSectionBook .title {
+  margin: 30px 0;
+}
+.parentSectionBook .title p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #5e6282;
+}
+.parentSectionBook .title h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #14183e;
+}
+.parentSectionBook .parent {
+  display: flex;
+  justify-content: space-between;
+}
+.parentSectionBook .parent .leftCont {
+  line-height: 1.5;
+}
+.parentSectionBook .parent .leftCont .content h2 {
+  margin-bottom: 20px;
+}
+.parentSectionBook .parent .leftCont .content .iconImg {
+  padding: 25px 0 25px 0;
+  display: flex;
+}
+.parentSectionBook .parent .leftCont .content p {
+  padding-left: 30px;
+}
+.parentSectionBook .parent .leftCont .content p span {
+  font-size: 15px;
+  font-weight: bold;
+}
+.parentSectionBook .parent .rightCont {
+  display: flex;
+  flex-direction: column;
+  box-shadow: #59b1e6 10px 5px 15px, rgba(0, 0, 0, 0.3490196078) 0px 5px 15px;
+  border-radius: 20px;
+}
+.parentSectionBook .parent .rightCont img {
+  padding: 20px;
+}
+.parentSectionBook .parent .rightCont .text {
+  padding: 20px;
+  line-height: 1.5;
+}
+.parentSectionBook .parent .rightCont .text .icon i {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  padding: 10px;
+}
+.parentSectionBook .parent .rightCont .text .building {
+  padding-top: 15px;
+}
+.parentSectionBook .parent .rightCont .text .building :nth-child(3) {
+  color: #4152ca;
+}
+.parentSectionBook .parent .rightCont .text .building p {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.parentSectionPeopleSay {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.parentSectionPeopleSay .title {
+  margin: 30px 0;
+}
+.parentSectionPeopleSay .title p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #5e6282;
+}
+.parentSectionPeopleSay .title h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #14183e;
+}
+.parentSectionPeopleSay .card {
+  margin-top: 50px;
+  width: 504px;
+  height: 245px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  line-height: 2;
+  position: relative;
+}
+.parentSectionPeopleSay .card img {
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+.parentSectionPeopleSay .card p {
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.parentSectionPeopleSay .card p span {
+  font-weight: 700;
+}
+
+.parentSectionLogoCompany {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.parentSectionEmailSubscribe {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  margin: 80px auto;
+  background-image: url(images/Curve\ Line\ \(1\).svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100px 10px 10px 10px;
+  text-align: center;
+  line-height: 2;
+  height: 300px;
+  position: relative;
+}
+.parentSectionEmailSubscribe i {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #747def;
+  right: -15px;
+  top: -15px;
+  position: absolute;
+}
+.parentSectionEmailSubscribe .text {
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+.parentSectionEmailSubscribe .text p {
+  font-size: 22px;
+}
+.parentSectionEmailSubscribe .Subscribe {
+  margin-top: 30px;
+  font-weight: 200;
+}
+.parentSectionEmailSubscribe .Subscribe input {
+  height: 35px;
+  width: 310px;
+  border: none;
+  border-radius: 8px;
+}
+.parentSectionEmailSubscribe .Subscribe button {
+  background-color: #ff946d;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  width: 120px;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  margin: 100px auto;
+}
+footer .textBrand {
+  line-height: 1.6;
+}
+footer .links {
+  display: flex;
+  justify-content: space-between;
+}
+footer .links .divCompany {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+footer .links .divCompany a {
+  text-decoration: none;
+  color: #212832;
+  margin-top: 5px;
+}
+footer .links .divContact {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+footer .links .divContact a {
+  text-decoration: none;
+  color: #212832;
+  margin-top: 5px;
+}
+footer .links .divMore {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+footer .links .divMore a {
+  text-decoration: none;
+  color: #212832;
+  margin-top: 5px;
+}
+footer .icon i {
+  margin: 8px;
+  padding-right: 8px;
+  border-radius: 50%;
+  color: #080809;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+footer .icon P {
+  margin: 20px 0;
+}
+footer .email {
+  padding-top: 70px;
+}
+footer .email p {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .parentLandingPage .containerLanding .imageHeader :nth-child(2) {
+    width: 500px;
+    left: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .parentNav .links .toggle-menu {
+    display: none;
+  }
+  .parentSectionDestinations {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .parentLandingPage .containerLanding .imageHeader .planeImg {
+    top: 40px;
+    left: 10px;
+  }
+  .parentLandingPage .containerLanding .imageHeader :nth-child(2) {
+    display: none;
+  }
+  .parentSectionCategory {
+    width: 100% !important;
+  }
+  .parentSectionCategory .cardItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .parentSectionCategory .cardItems .box {
+    width: 60% !important;
+    margin: 30px 0;
+    line-height: 1.3 !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-top: 30px;
+  }
+  .parentSectionDestinations .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .parentSectionDestinations .cards .card1 {
+    margin-top: 50px;
+  }
+  .parentSectionBook .parent {
+    flex-direction: column;
+  }
+  .parentSectionPeopleSay {
+    flex-direction: column;
+  }
+  .parentSectionPeopleSay .card {
+    width: 100%;
+    height: 300px;
+  }
+  .parentSectionLogoCompany {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .links {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .parentNav {
+    width: 95%;
+    padding-top: 20px;
+  }
+  .parentNav .links ul {
+    display: none;
+  }
+  .parentNav .links .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff1da;
+    z-index: 999;
+  }
+  .parentNav .links .toggle-menu:hover + ul a {
+    padding: 15px 10px;
+  }
+  .parentSectionEmailSubscribe {
+    line-height: 1.3;
+  }
+  .parentSectionEmailSubscribe .text p {
+    padding: 10px 10px 0 10px;
+  }
+  .parentSectionEmailSubscribe .Subscribe input {
+    width: 250px;
+  }
+}
+@media (max-width: 575px) {
+  .imageHeader {
+    display: none;
+  }
+  .containerLanding {
+    width: 100%;
+  }
+  .containerLanding .content {
+    padding-left: 10px !important;
+    text-align: start;
+  }
+  .containerLanding .content p {
+    margin: 0;
+  }
+  .containerLanding .content h2 {
+    font-size: 10px;
+  }
+  .containerLanding .content .imgRectangle {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
